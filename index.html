@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Daily Spend - Gestion de Finanzas</title>
+
+
+        <link rel="stylesheet" href="css/style.css" />
+
+    </head>
+
+    <body>
+        <!-- SECCIÓN PRINCIPAL -->
+        <main class="container">
+            
+            <!-- Encabezado -->
+            <header class="header">
+                <h1>💰 Daily Spend</h1>
+                <p>Distribuye tu dinero con la regla 50/30/20</p>
+            </header>
+
+            <!-- Formulario: aquí el usuario pone su sueldo -->
+            <section class="income-seciton">
+                <label for="income">¿Cuánto ganas al mes?</label>
+                <div class="input-group">
+                    <span class="currency">$</span>
+                    <input
+                        type="number"
+                        id="income"
+                        placeholder="Ej: 15000"
+                        min="0"
+                    />
+                    <button id="calculate-btn">Calcular</button>
+                </div>
+            </section>
+
+
+            <section class="results-section" id="results" hidden>
+
+                <h2>Tu presupuesto mensual</h2>
+
+                <!-- Tarjeta 1: Necesidades -->
+                <div class="card needs">
+                    <div class="card-icon">🏠</div>
+                    <div class="card-info">
+                        <h3>Necesidades</h3>
+                        <p class="percentage">50%</p>
+                        <p class="amount" id="needs-amount">$0</p>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 2: Deseos -->
+                <div class="card wants">
+                    <div class="card-icon">🎉</div>
+                    <div class="card-info">
+                        <h3>Deseos</h3>
+                        <p class="percentage">30%</p>
+                        <p class="amount" id="wants-amount">$0</p>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 3: Ahorros -->
+                <div class="card savings">
+                    <div class="card-icon">💰</div>
+                    <div class="card-info">
+                        <h3>Ahorros</h3>
+                        <p class="percentage">20%</p>
+                        <p class="amount" id="savings-amount">$0</p>
+                    </div>
+                </div>
+
+            </section>
+        </main>
+
+        <!-- Conectamos nuestro archivo de lógica, siempre al final del body -->
+        <script src="js/app.js"></script>
+
+    </body>
+</html>
